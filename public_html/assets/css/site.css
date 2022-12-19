@@ -1,0 +1,169 @@
+/* =Tooltip
+----------------------------------------------- */
+.tooltip, .popover { font-family: inherit; }
+
+/* =Form styles
+----------------------------------------------- */
+span.error, p.error { color: #a94442; font-size: 89%; }
+form p.error { margin-bottom: 0; }
+
+textarea.form-control { resize: vertical; }
+
+.panel-heading.modal-header {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+/* =Main layout
+----------------------------------------------- */
+html { min-height: 100%; }
+body {
+	font-family: "Source Sans Pro", sans-serif;
+	/*font-size: 16px;*/
+	background-color: #ddd;
+}
+
+footer, #footer {
+	padding: 20px 0 10px;
+	font-weight: 600;
+}
+
+main, #main {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #fff;
+}
+
+/* Header */
+.navbar-default {
+	background-color: #fff;
+	border-color: #808080;
+	padding-top: 2px;
+	margin-bottom: 0;
+}
+.navbar-nav > li > a { font-weight: 600; }
+
+/* Logo */
+.navbar-brand {
+	padding: 0 15px;
+	height: auto;
+}
+
+/* Social icons */
+.navbar-nav > li > .navbar-btn { margin-left: 15px; }
+@media (max-width: 767px) {
+	.navbar-nav > li > .navbar-btn {
+		margin-top: 2px;
+		margin-bottom: 2px;
+	}
+}
+
+.btn-social {
+	font-size: 120%;
+	padding: 4px 10px;
+}
+.btn-social, .btn-social:hover, .btn-social:focus { color: #fff; }
+
+.btn-facebook {
+	background-color: #3b5998;
+	border-color: #344e86;/* -5% */
+}
+.btn-facebook:focus, .btn-facebook.focus {
+	background-color: #2d4373;/* -10% */
+	border-color: #10182a;/* -30% */
+}
+.btn-facebook:hover, .btn-facebook:active, .btn-facebook.active {
+	background-color: #2d4373;
+	border-color: #23345a;/* -17% */
+}
+.btn-facebook:active:hover, .btn-facebook.active:hover,
+.btn-facebook:active:focus, .btn-facebook.active:focus,
+.btn-facebook:active.focus, .btn-facebook.active.focus {
+	background-color: #23345a;
+	border-color: #10182a;
+}
+
+.btn-twitter {
+	background-color: #55acee;
+	border-color: #3ea1ec;
+}
+.btn-twitter:focus, .btn-twitter.focus {
+	background-color: #2795e9;
+	border-color: #0f5f9b;
+}
+.btn-twitter:hover, .btn-twitter:active, .btn-twitter.active {
+	background-color: #2795e9;
+	border-color: #1583d7;
+}
+.btn-twitter:active:hover, .btn-twitter.active:hover,
+.btn-twitter:active:focus, .btn-twitter.active:focus,
+.btn-twitter:active.focus, .btn-twitter.active.focus {
+	background-color: #1583d7;
+	border-color: #0f5f9b;
+}
+
+/* Search form */
+.navbar-form .input-group > .form-control,
+.navbar-form .input-group .btn-default {
+	border-left-color: #f5f5f5;
+}
+
+.navbar-form .input-group-addon > .img-circle {
+	color: #917f6a;
+	background-color: #ddd;
+	line-height: 1.3;
+}
+
+/* =Login page
+----------------------------------------------- */
+.login-page main, .login-page #main {
+	padding-top: 100px;
+	padding-bottom: 65px;
+	background: url(../img/login_bg.jpg) no-repeat 75% 50%;
+	background-size: cover;
+}
+@media (min-width: 992px) {
+	.login-page main, .login-page #main {
+		padding-top: 145px;
+		padding-bottom: 110px;
+	}
+}
+@media (min-width: 1200px) {
+	.login-page main, .login-page #main {
+		padding-top: 200px;
+		padding-bottom: 165px;
+	}
+}
+
+/* =User home
+----------------------------------------------- */
+.user-layout main, .user-layout #main {
+	background: url(../img/dashboard_bg.jpg) no-repeat 50% 50%;
+	background-size: cover;
+}
+
+/* =Helper classes
+----------------------------------------------- */
+.no-margin { margin: 0; }
+.separator { margin-bottom: 5px; }
+
+.bigger { font-size: 107%; }
+.smaller { font-size: 93%; }
+
+.text-truncate {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+/*noinspection CssInvalidPropertyValue*/
+.word-break {
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	-ms-word-break: break-all;
+	/*word-break: break-all;*/
+	word-break: break-word;
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+}

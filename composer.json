@@ -1,0 +1,94 @@
+{
+    "name": "sonnydelite/signature-travel-network",
+    "description": "STN Magazine customization based on PDF templates.",
+    "keywords": ["signature-travel-network", "stn magazine", "magazine customization", "pdf templates"],
+    "license": "UNLICENSED",
+    "type": "project",
+    "require": {
+        "laravel/framework": "4.2.*",
+        "guzzlehttp/guzzle": "~4.0",
+        "davelip/laravel-database-queue": ">0.5",
+        "bllim/laravalid": "~0.9",
+        "setasign/fpdi-tcpdf": "~1.6.0",
+        "intervention/image": "~2.3.0",
+        "mews/captcha": "~1.0.2"
+    },
+    "require-dev": {
+        "barryvdh/laravel-ide-helper": "~1.11"
+    },
+    "autoload": {
+        "classmap": [
+            "app/core",
+            "app/commands",
+            "app/controllers",
+            "app/models",
+            "app/database/migrations",
+            "app/database/seeds"
+        ]
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "php artisan clear-compiled",
+            "php artisan optimize"
+        ],
+        "post-update-cmd": [
+            "php artisan clear-compiled",
+            "php artisan optimize"
+        ],
+        "post-create-project-cmd": [
+            "php artisan key:generate"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "barryvdh/laravel-ide-helper",
+                "version": "1.11.7",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/nthachus/laravel-ide-helper/zipball/1.11",
+                    "reference": "1.11"
+                },
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/nthachus/laravel-ide-helper.git",
+                    "reference": "1.11"
+                },
+                "autoload": {
+                    "psr-4": {
+                        "Barryvdh\\LaravelIdeHelper\\": "src"
+                    }
+                },
+                "require": {
+                    "php": ">=5.3.0",
+                    "illuminate/config": "4.x",
+                    "illuminate/support": "4.x",
+                    "illuminate/console": "4.x",
+                    "illuminate/filesystem": "4.x",
+                    "illuminate/database": "4.x",
+                    "illuminate/view": "4.x",
+                    "phpdocumentor/reflection-docblock": "^2.0.4",
+                    "symfony/class-loader": "~2.3"
+                },
+                "require-dev": {
+                    "doctrine/dbal": "~2.3",
+                    "phpunit/phpunit": "~4.0"
+                },
+                "license": "MIT",
+                "authors": [
+                    {
+                        "name": "Barry vd. Heuvel",
+                        "email": "barryvdh@gmail.com"
+                    }
+                ],
+                "description": "Laravel IDE Helper, generates correct PHPDocs for all Facade classes, to improve auto-completion.",
+                "keywords": ["laravel", "autocomplete", "ide", "helper", "phpstorm", "netbeans", "sublime", "codeintel", "phpdoc"]
+            }
+        }
+    ],
+    "minimum-stability": "stable"
+}
